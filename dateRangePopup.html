@@ -428,7 +428,7 @@
     console.log(`getDateRange: ${subLocalName}`);
       let returnValue;
       dateRanges.map(function(subLocal) {
-        if (subLocal['subLocalName'] === subLocalName) {
+        if (subLocal['subLocalName'].startsWith(subLocalName)) {
           console.log(`Match: ${subLocalName}`);
           openDate = new Date(subLocal.openDate);
           closeDate = new Date(subLocal.closeDate);
@@ -496,40 +496,19 @@
 
         // append info to dateRange display div
         const dateRangeSpan = document.getElementById('dateRange');
-        const dateRangeDates = `<p class="dateRange">${subLocalName} Nominations open: ${dateRange}<p>`;
-        const infoHtml = `${dateRangeDates} ${info}`;
+        // const dateRangeDates = `<p class="dateRange">${subLocalName} Nominations open: ${dateRange}<p>`;
+        // const infoHtml = `${dateRangeDates} ${info}`;
 
-        dateRangeSpan.innerHTML = infoHtml;
+        dateRangeSpan.innerHTML = info;
         console.log(dateRangeSpan.innerHTML);
 
         // open the modal
         document.getElementById("hiddenButton").click();
 
-        // hide the rest of the form
+        // hide the rest of the form, disable submit button
         document.getElementById("tfa_636").setAttribute('style','display:none;');
         document.getElementById("tfa_662").setAttribute('style','display:none;');
-
-
-        // add onClick attribute to close button
-        const buttonEl = document.getElementById("js-modal-close");
-        function redirectIfClosed() {
-
-        }
-
-        // get old onclick attribute
-        var onclick = buttonEl.getAttribute("onclick");
-
-        // if onclick is not a function, it's not IE7, so use setAttribute
-        if(typeof(onclick) != "function") {
-            buttonEl.setAttribute('onclick','window.location.replace("http://www.seiu503.org");' + onclick); // for FF,IE8,Chrome
-
-        // if onclick is a function, use the IE7 method and call onclick() in the anonymous function
-        } else {
-            buttonEl.onclick = function() {
-                window.location.replace("http://www.seiu503.org");
-                onclick();
-            }; // for IE7
-        }
+        document.getElementById("submit_button").setAttribute('disabled','true');
 
       }
     }
