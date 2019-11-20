@@ -1,6 +1,12 @@
 <script>
   const dateRanges = [
     {
+      "subLocalNumber": 1,
+      "subLocalName": "Retirees",
+      "openDate": "2/1/2020",
+      "closeDate": "3/13/2020"
+    },
+    {
       "subLocalNumber": 82,
       "subLocalName": "Western Oregon University (WOU)",
       "openDate": "1/14/20",
@@ -510,6 +516,11 @@
         document.getElementById("tfa_662").setAttribute('style','display:none;');
         document.getElementById("submit_button").setAttribute('disabled','true');
 
+      } else {
+        // display the rest of the form, re-enable submit button
+        document.getElementById("tfa_636").setAttribute('style','display:block;');
+        document.getElementById("tfa_662").setAttribute('style','display:block;');
+        document.getElementById("submit_button").setAttribute('disabled','false');
       }
     }
 
@@ -526,6 +537,19 @@
       console.log(`subLocalName: ${subLocalName}`);
       checkDateRange(subLocalName);
     });
+
+    // when division is selected: tfa_1178: retirees
+    document.getElementById('tfa_1178').addEventListener('change', function() {
+      console.log(getSelectedText('tfa_1178'));
+      if (getSelectedText('tfa_1178') === 'Retirees') {
+        subLocalName = getSelectedText('tfa_1178');
+        console.log(`subLocalName: ${subLocalName}`);
+        checkDateRange(subLocalName);
+      }
+
+    });
+
+
 
   });
 </script>
