@@ -1,429 +1,571 @@
 <script>
   const dateRanges = [
-    {
-      "subLocalNumber": 1,
-      "subLocalName": "Retirees",
-      "openDate": "2/1/2020",
-      "closeDate": "3/13/2020"
-    },
-    {
-      "subLocalNumber": 82,
-      "subLocalName": "Western Oregon University (WOU)",
-      "openDate": "1/14/20",
-      "closeDate": "2/11/20"
-    },
-    {
-      "subLocalNumber": 85,
-      "subLocalName": "University of Oregon (UO)",
-      "openDate": "1/8/20",
-      "closeDate": "2/12/20"
-    },
-    {
-      "subLocalNumber": 108,
-      "subLocalName": "Oregon Housing & Community Services (OHCS)",
-      "openDate": "2/3/20",
-      "closeDate": "3/13/20"
-    },
-    {
-      "subLocalNumber": 592,
-      "subLocalName": "Central Oregon Irrigation District (COID)",
-      "openDate": "12/11/19",
-      "closeDate": "1/8/20"
-    },
-    {
-      "subLocalNumber": 81,
-      "subLocalName": "Eastern Oregon University (EOU)",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 83,
-      "subLocalName": "Oregon State University (OSU)",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 90,
-      "subLocalName": "Oregon Institute of Technology (OIT)",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 96,
-      "subLocalName": "Child Care",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 98,
-      "subLocalName": "Addus",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 140,
-      "subLocalName": "Portland Public School Employees (PPS)",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 150,
-      "subLocalName": "Department of Revenue (DOR)",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 294,
-      "subLocalName": "Marion County Employees Association (MCEA)",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 390,
-      "subLocalName": "Linn County Employees",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 440,
-      "subLocalName": "Department of Consumer and Business Services (DCBS)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 543,
-      "subLocalName": "State Library",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 585,
-      "subLocalName": "Commission for the Blind",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 735,
-      "subLocalName": "Driver and Motor Vehicle Services (DMV)",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 123,
-      "subLocalName": "DOGAMI",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 858,
-      "subLocalName": "Adult Foster Homes",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 905,
-      "subLocalName": "Education Northwest",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 926,
-      "subLocalName": "City of Wilsonville",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 963,
-      "subLocalName": "Comprehensive Options for Drug Abuse (CODA)",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 999,
-      "subLocalName": "Alvord Taylor",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 198,
-      "subLocalName": "City of Beaverton",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 333,
-      "subLocalName": "Health, Licensing Boards, and Commissions",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 471,
-      "subLocalName": "Employment",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 596,
-      "subLocalName": "Baker County Employees",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 690,
-      "subLocalName": "Water Resources (including OWEB)",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 697,
-      "subLocalName": "Coos Bay/ North Bend Water Board",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 730,
-      "subLocalName": "Oregon Dept. of Transportation (ODOT)",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 902,
-      "subLocalName": "Oregon Supported Living Program (OSLP)",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 904,
-      "subLocalName": "The Child Center",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 921,
-      "subLocalName": "City of Cannon Beach",
-      "openDate": "1/29/20",
-      "closeDate": "2/26/20"
-    },
-    {
-      "subLocalNumber": 923,
-      "subLocalName": "Wallowa County Roads Dept.",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 924,
-      "subLocalName": "Wallowa County Professional Employees Union",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 97,
-      "subLocalName": "Nursing Homes",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 985,
-      "subLocalName": "Curry County Employees Assoc.",
-      "openDate": "1/17/20",
-      "closeDate": "2/14/20"
-    },
-    {
-      "subLocalNumber": 84,
-      "subLocalName": "Southern Oregon University (SOU)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 89,
-      "subLocalName": "Portland State University (PSU)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 109,
-      "subLocalName": "Oregon Dept of Fish and Wildlife (ODFW)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 125,
-      "subLocalName": "Department of Administrative Service (DAS)",
-      "openDate": "",
-      "closeDate": ""
-    },
-    {
-      "subLocalNumber": 137,
-      "subLocalName": "Department of Justice (DOJ)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 170,
-      "subLocalName": "Treasury Department",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 199,
-      "subLocalName": "City of Tigard",
-      "openDate": "1/15/20",
-      "closeDate": "3/4/20"
-    },
-    {
-      "subLocalNumber": 274,
-      "subLocalName": "Veteran's Affairs",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 392,
-      "subLocalName": "Oregon State Hospital (OSH)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 393,
-      "subLocalName": "Pendleton Cottage (SDSRTF)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 415,
-      "subLocalName": "Oregon Youth Authority (OYA) Central / Parole",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 459,
-      "subLocalName": "Public Employees Retirement System (PERS)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 496,
-      "subLocalName": "Josephine County Public Works",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 497,
-      "subLocalName": "Jackson County Employee Assoc. (JCEA)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 501,
-      "subLocalName": "Cascade Aids Project (CAP)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 570,
-      "subLocalName": "Oregon Public Broadcasting (OPB)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 575,
-      "subLocalName": "Higher Education Coordinating Commission (HECC) and Office of Student Access and Completion (OSAC)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 581,
-      "subLocalName": "Oregon Department of Education",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 584,
-      "subLocalName": "Teacher Standards and Practices Commission (TSPC)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 603,
-      "subLocalName": "Department of Agriculture",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 629,
-      "subLocalName": "Department of Forestry",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 733,
-      "subLocalName": "Oregon Department of Parks and Recreation",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 777,
-      "subLocalName": "Basin Transit Service (BTS)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 839,
-      "subLocalName": "Bureau of Labor & Industries (BOLI)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 908,
-      "subLocalName": "Lane Council of Governments (LCOG)",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 910,
-      "subLocalName": "City of The Dalles Employees Assoc.",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 937,
-      "subLocalName": "Oregon Cascade West Council of Governments (OCWCG)",
-      "openDate": "1/2/20",
-      "closeDate": "1/31/20"
-    },
-    {
-      "subLocalNumber": 938,
-      "subLocalName": "City of Pendleton Employees Assoc.",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 987,
-      "subLocalName": "Parry Center for Children",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 995,
-      "subLocalName": "City of Springfield",
-      "openDate": "2/3/20",
-      "closeDate": "3/2/20"
-    },
-    {
-      "subLocalNumber": 99,
-      "subLocalName": "Homecare",
-      "openDate": "1/2/20",
-      "closeDate": "2/7/20"
-    },
-    {
-      "subLocalNumber": 200,
-      "subLocalName": "Department of Human Services / Oregon Health Authority (DHS/OHA)",
-      "openDate": "1/2/20",
-      "closeDate": "2/7/20"
-    }
-  ];
+  {
+    "subLocalNumber": 1,
+    "subLocalName": "Retiree Local",
+    "openDate": "2/1/2020",
+    "closeDate": "3/13/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 81,
+    "subLocalName": "Eastern Oregon University (EOU)",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 82,
+    "subLocalName": "Western Oregon University (WOU)",
+    "openDate": "1/14/2020",
+    "closeDate": "2/11/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 83,
+    "subLocalName": "Oregon State University (OSU)",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 84,
+    "subLocalName": "Southern Oregon University (SOU)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 85,
+    "subLocalName": "University of Oregon (UO)",
+    "openDate": "1/8/2020",
+    "closeDate": "2/12/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 89,
+    "subLocalName": "Portland State University (PSU)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 90,
+    "subLocalName": "Oregon Institute of Technology (OIT)",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 96,
+    "subLocalName": "Child Care",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 98,
+    "subLocalName": "Addus",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 99,
+    "subLocalName": "Homecare",
+    "openDate": "1/2/2020",
+    "closeDate": "2/7/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 108,
+    "subLocalName": "Oregon Housing & Community Services (OHCS)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/13/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 109,
+    "subLocalName": "Oregon Department of Fish And Wildlife",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 123,
+    "subLocalName": "Dept. of Geology and Mineral Industries (DOGAMI)",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 125,
+    "subLocalName": "Dept of Administrative Services",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 137,
+    "subLocalName": "Dept of Justice",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 140,
+    "subLocalName": "Portland Public School Employees (PPS)",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 150,
+    "subLocalName": "Dept of Revenue",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 170,
+    "subLocalName": "Treasury Department",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 198,
+    "subLocalName": "Beaverton, City Of",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 199,
+    "subLocalName": "Tigard, City Of",
+    "openDate": "1/15/2020",
+    "closeDate": "3/4/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 274,
+    "subLocalName": "Oregon Dept of Veterans Affairs",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 294,
+    "subLocalName": "Marion County Employees Association (MCEA)",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 333,
+    "subLocalName": "Health, Licensing Boards, and Commissions",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 390,
+    "subLocalName": "Linn County Employees",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 392,
+    "subLocalName": "Oregon State Hospital (OSH)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 393,
+    "subLocalName": "Pendleton Cottage (SDSRTF)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 415,
+    "subLocalName": "Oregon Youth Authority (OYA) Central / Parole",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 440,
+    "subLocalName": "Dept of Consumer & Business Serv",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 459,
+    "subLocalName": "Public Employees Retirement System (PERS)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 471,
+    "subLocalName": "Employment Department",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 496,
+    "subLocalName": "Josephine County Public Works",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 497,
+    "subLocalName": "Jackson County Employees",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 501,
+    "subLocalName": "Cascade Aids Project (CAP)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 543,
+    "subLocalName": "Oregon State Library",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 570,
+    "subLocalName": "Oregon Public Broadcasting (OPB)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 575,
+    "subLocalName": "Higher Education Coordinating Commission (HECC) and Office of Student Access and Completion (OSAC)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 581,
+    "subLocalName": "Dept of Education",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 584,
+    "subLocalName": "Teachers Standards & Practices Comm",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 585,
+    "subLocalName": "Blind Commission Workers",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 592,
+    "subLocalName": "Central Oregon Irrigation District (COID)",
+    "openDate": "12/11/2019",
+    "closeDate": "1/8/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 596,
+    "subLocalName": "Baker County Employees",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 603,
+    "subLocalName": "Dept of Agriculture",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 629,
+    "subLocalName": "Dept of Forestry",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 690,
+    "subLocalName": "Water Resources Workers",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 697,
+    "subLocalName": "Coos Bay/ North Bend Water Board",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 730,
+    "subLocalName": "Oregon Dept. of Transportation (ODOT)",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 733,
+    "subLocalName": "Oregon Parks & Recreation Dept",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 735,
+    "subLocalName": "Driver & Motor Vehicle Services",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 777,
+    "subLocalName": "Basin Transit Service (BTS)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 839,
+    "subLocalName": "Bureau of Labor And Industries",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 858,
+    "subLocalName": "Adult Foster Homes",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 902,
+    "subLocalName": "Oregon Supported Living Program (OSLP)",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 904,
+    "subLocalName": "Child Center, The",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 905,
+    "subLocalName": "Education Northwest",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 908,
+    "subLocalName": "Lane Council of Governments (LCOG)",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 910,
+    "subLocalName": "The Dalles City Employees Assn.",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 921,
+    "subLocalName": "Cannon Beach, City Of",
+    "openDate": "1/29/2020",
+    "closeDate": "2/26/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 923,
+    "subLocalName": "Wallowa Co. Roads Dept",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 924,
+    "subLocalName": "Wallowa Cty Professional Employees Union",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 926,
+    "subLocalName": "Wilsonville, City Of",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 937,
+    "subLocalName": "OR Cascade West CoG",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 938,
+    "subLocalName": "Pendleton, City Of",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "TRUE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 963,
+    "subLocalName": "Comprehensive Options for Drug Abuse (CODA)",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 985,
+    "subLocalName": "Curry County Employees Assoc.",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 987,
+    "subLocalName": "Parry Center for Children",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 995,
+    "subLocalName": "Springfield, City Of",
+    "openDate": "2/3/2020",
+    "closeDate": "3/2/2020",
+    "statement": "FALSE",
+    "photo": "FALSE"
+  },
+  {
+    "subLocalNumber": 999,
+    "subLocalName": "Alvord Taylor",
+    "openDate": "1/2/2020",
+    "closeDate": "1/31/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 200,
+    "subLocalName": "Department of Human Services / Oregon Health Authority (DHS/OHA)",
+    "openDate": "1/2/2020",
+    "closeDate": "2/7/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  },
+  {
+    "subLocalNumber": 97,
+    "subLocalName": "Nursing Homes",
+    "openDate": "1/17/2020",
+    "closeDate": "2/14/2020",
+    "statement": "TRUE",
+    "photo": "TRUE"
+  }
+];
   var subLocalName;
   var openDate;
   var closeDate;
+  var statement;
+  var photo;
   var options = { year: "numeric", month: "short", day: "numeric" };
 
   function formatDate(date) {
@@ -433,16 +575,30 @@
   function getDateRange(subLocalName) {
     console.log(`getDateRange: ${subLocalName}`);
       let returnValue;
-      dateRanges.map(function(subLocal) {
-        if (subLocal['subLocalName'].startsWith(subLocalName)) {
-          console.log(`Match: ${subLocalName}`);
+      if (subLocalName.startsWith('DHS')) {
+          console.log(`DHS: ${subLocalName}`);
+          const subLocal = dateRanges.find(subLocal => subLocal['subLocalNumber'] === 200);
           openDate = new Date(subLocal.openDate);
           closeDate = new Date(subLocal.closeDate);
+          statement = subLocal.statement;
+          photo = subLocal.photo;
           returnValue = `${formatDate(openDate)} to ${formatDate(closeDate)}`
           console.log(returnValue);
+        } else {
+          dateRanges.map(function(subLocal) {
+            if (subLocal['subLocalName'].startsWith(subLocalName)) {
+              console.log(`Match: ${subLocalName}`);
+              openDate = new Date(subLocal.openDate);
+              closeDate = new Date(subLocal.closeDate);
+              statement = subLocal.statement;
+              photo = subLocal.photo;
+              returnValue = `${formatDate(openDate)} to ${formatDate(closeDate)}`
+              console.log(returnValue);
+            }
+          });
         }
-      });
-      return returnValue;
+
+      return [returnValue, statement, photo];
     }
 
   // get text value of selected option
@@ -462,8 +618,10 @@
 
     function checkDateRange(subLocalName) {
       // find date range based on sublocalName
-      var dateRange = getDateRange(subLocalName);
-      console.log(`dateRange: ${dateRange}`);
+      var dateRange = getDateRange(subLocalName)[0];
+      var statement = getDateRange(subLocalName)[1];
+      var photo = getDateRange(subLocalName)[2];
+      console.log(`dateRange: ${dateRange}, statement: ${statement}, photo: ${photo}`);
 
       // append hidden button to DOM
       var hiddenButton = document.createElement('button');
@@ -484,9 +642,9 @@
       console.log(`today: ${today}`);
       console.log(`openDate: ${openDate}`);
       console.log(`closeDate: ${closeDate}`);
-      console.log(`today <= closeDate? ${today <= closeDate}`);
-      console.log(`today >= openDate? ${today >= openDate}`);
-      if (today <= closeDate || today >= openDate) {
+      console.log(`today > closeDate? ${today > closeDate}`);
+      console.log(`today < openDate? ${today < openDate}`);
+      if (today > closeDate || today < openDate) {
         console.log('modal open');
 
         // generate the explanatory text
@@ -502,8 +660,8 @@
 
         // append info to dateRange display div
         const dateRangeSpan = document.getElementById('dateRange');
-        // const dateRangeDates = `<p class="dateRange">${subLocalName} Nominations open: ${dateRange}<p>`;
-        // const infoHtml = `${dateRangeDates} ${info}`;
+        const dateRangeDates = `<p class="dateRange">${subLocalName} Nominations open: ${dateRange}<p>`;
+        const infoHtml = `${dateRangeDates} ${info}`;
 
         dateRangeSpan.innerHTML = info;
         console.log(dateRangeSpan.innerHTML);
@@ -520,7 +678,25 @@
         // display the rest of the form, re-enable submit button
         document.getElementById("tfa_636").setAttribute('style','display:block;');
         document.getElementById("tfa_662").setAttribute('style','display:block;');
-        document.getElementById("submit_button").setAttribute('disabled','false');
+        document.getElementById("submit_button").removeAttribute('disabled');
+      }
+
+      // if photo
+      if (photo) {
+        // show photo section
+        document.getElementById("tfa_2310").setAttribute('style','display:block;');
+      } else {
+        // hide photo section
+        document.getElementById("tfa_2310").setAttribute('style','display:none;');
+      }
+
+      // if statement
+      if (statement) {
+        // show statement section
+        document.getElementById("tfa_2309").setAttribute('style','display:block;');
+      } else {
+        // hide statement section
+        document.getElementById("tfa_2309").setAttribute('style','display:none;');
       }
     }
 
@@ -531,9 +707,16 @@
       checkDateRange(subLocalName);
     });
 
-    // when sublocal is selected: tfa_1404: public services
+    // when sublocal is selected: tfa_1404: public services: state
     document.getElementById('tfa_1404').addEventListener('change', function() {
       subLocalName = getSelectedText('tfa_1404');
+      console.log(`subLocalName: ${subLocalName}`);
+      checkDateRange(subLocalName);
+    });
+
+    // when sublocal is selected: tfa_2452: public services: hiEd/lGov
+    document.getElementById('tfa_2452').addEventListener('change', function() {
+      subLocalName = getSelectedText('tfa_2452');
       console.log(`subLocalName: ${subLocalName}`);
       checkDateRange(subLocalName);
     });
